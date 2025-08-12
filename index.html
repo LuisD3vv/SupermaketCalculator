@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simulador de comrpas del super</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="contenedor">
+    <div class="contenedor--header">
+        <h2>SupermarketCalc</h2>
+        <button><a href="productos.html">Detalle Producto</a></button>
+    </div>
+
+    <div class="infoProducto">
+        <div class="infoProducto--campo">
+            <p>Total</p>
+            <p id="TotalActual">--</p>
+        </div>
+        <div class="infoProducto--campo">
+            <p>Ultimo producto agregado</p>
+            <p>--</p>
+        </div>
+    </div>
+    <div class="agreProducto">
+        <div class="agreProducto--campo">
+            <label>Nombre</label>
+            <input type="text" placeholder="Nombre" id="nombreProducto" autocomplete="off">
+        </div>
+        <div class="agreProducto--campo">
+            <label for="cantidadProducto">Cantidad</label>
+            <input type="text" placeholder="cantidad" id="cantidadProducto" autocomplete="off">
+        </div>
+        <div class="agreProducto--campo">
+            <label for="precioProducto">Precio</label>
+            <input type="text" placeholder="precio" id="precioProducto">
+        </div>
+        <div class="agreProducto--campo boton">
+          <button onclick="agregarProducto()">Agregar producto</button>
+        </div>
+    </div>
+    <!--
+    usar details/summary
+    y usar el dialog
+    -->
+</div>
+<p class="author">&copy; 2025 <a href="#">Lissandro D3v</a> </p>
+<script src="script.js"></script>
+</body>
+</html>
