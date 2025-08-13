@@ -3,42 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Simulador de comrpas del super</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Simulador de compras del super</title>
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
 <div class="contenedor">
     <div class="contenedor--header">
-        <h2>SupermarketCalc</h2>
-        <button><a href="productos.html">Detalle Producto</a></button>
+        <h2>KalculatorME</h2>
+        <button id="detalleProducto"><a href="productos.html">Detalle Producto</a></button>
     </div>
 
     <div class="infoProducto">
         <div class="infoProducto--campo">
-            <p>Total</p>
+            <p>Tota Actual:</p>
             <p id="TotalActual">--</p>
         </div>
         <div class="infoProducto--campo">
             <p>Ultimo producto agregado</p>
-            <p>--</p>
+            <p id="lastProduct">--</p>
         </div>
     </div>
     <div class="agreProducto">
         <div class="agreProducto--campo">
-            <label>Nombre</label>
+            <label>Nombre del producto</label>
             <input type="text" placeholder="Nombre" id="nombreProducto" autocomplete="off">
         </div>
         <div class="agreProducto--campo">
             <label for="cantidadProducto">Cantidad</label>
-            <input type="text" placeholder="cantidad" id="cantidadProducto" autocomplete="off">
+            <input type="text" placeholder="Cantidad del producto" id="cantidadProducto" autocomplete="off">
         </div>
         <div class="agreProducto--campo">
             <label for="precioProducto">Precio</label>
-            <input type="text" placeholder="precio" id="precioProducto">
+            <input type="text" placeholder="Precio indivual" id="precioProducto">
         </div>
         <div class="agreProducto--campo boton">
-          <button onclick="agregarProducto()">Agregar producto</button>
+          <button id="agregarproducto" onclick="agregarProducto()">Agregar producto</button>
         </div>
     </div>
     <!--
