@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="contenedor contTable">
-  <a href="index.html" style="color:#319d90">Ir a indice</a>
+  <a class="regresar" href="index.html"><= Seguir agregando</a>
   <table>
     <caption>Detalle de productos</caption>
     <thead>
@@ -22,15 +22,48 @@
       <th>Cantidad</th>
       <th>Precio</th>
     </tr>
-    <tr id="genCantidad">
-      <td class="nombre"></td>
-      <td class="cantidad"></td>
-      <td class="precio"></td>
-    </tr>
+
+
 
 
     </thead>
   </table>
+    <p>Puedes eliminar los productos en cualquier momento.</p>
 </div>
+<p class="author">&copy; 2025 <a href="https://github.com/LuisD3vv">Lissandro D3v</a> </p>
+<script>
+ document.addEventListener("DOMContentLoaded",() => {
+
+     let get = JSON.parse(localStorage.getItem('productos')) || [];
+
+     let n = localStorage.getItem("nombreG");
+     let c = localStorage.getItem("cantidadG");
+     let p = localStorage.getItem("precioG");
+
+     const contenedor = document.querySelector("table");
+
+     let td_1 = document.createElement("td");
+     let td_2 = document.createElement("td");
+     let td_3 = document.createElement("td");
+
+     td_1.classList.add("nombre");
+     td_2.classList.add("cantidad");
+     td_3.classList.add("precio");
+
+     // recuperar los datos de nuevo
+     td_1.textContent = n;
+     td_2.textContent = c;
+     td_3.textContent = p;
+
+     console.log(td_1,td_2,td_3);
+
+     // Agregarlos al html
+     contenedor.appendChild(td_1);
+     contenedor.appendChild(td_2);
+     contenedor.appendChild(td_3);
+ })
+
+
+</script>
 </body>
 </html>

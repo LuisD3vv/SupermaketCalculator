@@ -13,8 +13,8 @@
 <body>
 <div class="contenedor">
     <div class="contenedor--header">
-        <h2>KalculatorME</h2>
-        <button id="detalleProducto"><a href="productos.html">Detalle Producto</a></button>
+        <h2>Augmentum</h2>
+
     </div>
 
     <div class="infoProducto">
@@ -34,14 +34,16 @@
         </div>
         <div class="agreProducto--campo">
             <label for="cantidadProducto">Cantidad</label>
-            <input type="text" placeholder="Cantidad del producto" id="cantidadProducto" autocomplete="off">
+            <input type="number" min="1" max="999" value="1" placeholder="Cantidad del producto" id="cantidadProducto" autocomplete="off">
         </div>
         <div class="agreProducto--campo">
             <label for="precioProducto">Precio</label>
             <input type="text" placeholder="Precio indivual" id="precioProducto">
         </div>
         <div class="agreProducto--campo boton">
-          <button id="agregarproducto" onclick="agregarProducto()">Agregar producto</button>
+            <button id="agregarproducto" onclick="agregarProducto()">Agregar producto</button>
+
+            <a id="detalleProducto" href="productos.html">Detalle Producto =></a>
         </div>
     </div>
     <!--
@@ -49,7 +51,7 @@
     y usar el dialog
     -->
 </div>
-<p class="author">&copy; 2025 <a href="#">Lissandro D3v</a> </p>
+<!--<p class="author">&copy; 2025 <a href="https://github.com/LuisD3vv">Lissandro D3v</a> </p>-->
 <script src="script.js"></script>
 </body>
 </html>

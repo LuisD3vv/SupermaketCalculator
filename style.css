@@ -11,16 +11,11 @@ body {
 }
 html {
     box-sizing: border-box;
-    font-size: 65.2%;
+    font-size: 62.5%;
 }
-.no-margin {
-    margin: 0;
-}
-.no-padding {
-    padding: 0;
-}
+.no-margin {margin: 0;}
+.no-padding {padding: 0;}
 a {text-decoration: none}
-
 .contenedor {
     display: flex;
     flex-direction: column;
@@ -35,10 +30,8 @@ a {text-decoration: none}
 }
 .contenedor--header {
     display: flex;
-    justify-content: space-between;
     width: auto;
-    flex-wrap: wrap;
-gap: 1rem;
+    gap: 1rem;
 
 }
 .contenedor--header h2 {
@@ -46,24 +39,26 @@ gap: 1rem;
     font-family: monospace;
     font-size: 2rem;
     background-color: #e4f3f6;
-    height: auto;
-    padding: 10px;
+    height: 100%;
+    padding: 1rem;
     border-radius: 5px;
-    flex: 1 1 150px;
+    flex: 1 1 auto;
 }
 #detalleProducto {
+    text-align: center;
+    font-size: 1.2rem;
     padding: 1rem;
     align-self: center;
     cursor: pointer;
     border-radius: 5px;
     border: none;
-    box-shadow: 2px 2px 2px 1px #319d90;
     transition: all ease 0.3s;
     font-weight: bold;
-    flex: 1 1 50px;
+    flex: 1 1 5rem;
+    background-color: #e4f3f6;
+
 }
 #detalleProducto:hover {
-    box-shadow: unset;
     transition: box-shadow ease 0.3s;
 }
 a {
@@ -107,12 +102,11 @@ a {
     overflow: auto;
     background-color: #319d90;
     padding: 1rem;
-    border-radius: 5px;
-
+    border-radius: .5rem;
 }
 .agreProducto--campo {
     background-color: #319d90;
-    border-radius: 5px;
+    border-radius: .5rem;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -128,7 +122,7 @@ a {
 }
 .agreProducto input {
     background-color: #e4f3f6;
-    border-radius: 5px;
+    border-radius: .5rem;
     border: none;
     width: auto;
     padding: 1rem;
@@ -138,23 +132,24 @@ input::placeholder {text-align: center}
 .boton {
     display: flex;
     background-color: unset;
+    flex-wrap: wrap;
     flex-direction: row;
-    flex: 0 0 50px;
+    flex: 1 1 auto;
     justify-content: flex-end;
 }
 #agregarproducto {
-    padding: 10px;
-    border-radius: 5px;
+    padding: 1rem;
+    border-radius: .5rem;
     border: none;
     cursor: pointer;
-    background-color: #e4f3f6;
     font-weight: bold;
-    box-shadow: 2px 2px 2px 1px #319d90;
+    flex: 1 1 5rem;
+}
+#agregarproducto:hover {
+    background-color: #e4f3f6;
 }
 #agregarproducto:active {
     margin-top: 1px;
-    box-shadow:unset;
-
 }
 p {
     font-size: 1.2rem;
@@ -162,7 +157,7 @@ p {
 }
 #TotalActual{
     font-size: 2rem;
-  width: 10rem;
+    width: 10rem;
     height: 100%;
     padding: 1rem;
     text-align: center;
@@ -170,13 +165,16 @@ p {
 }
 
 @media (max-width: 45rem) {
-    #agregarproducto {
+    #agregarproducto,#detalleProducto {
         width: 100%;
+        padding: 1.5rem;
+        font-size: 1.5rem;
     }
     .contenedor {
-            width:95%;
+        width:95%;
         margin-top: auto;
         padding: 0;
+        margin-bottom: 0;
     }
     .agreProducto {
         width: 100%;
@@ -187,37 +185,96 @@ p {
     .contTable {
         margin-top: auto;
     }
+    input {
+        padding: 2rem !important;
+    }
+
+    .boton {
+        flex-direction: column;
+    }
+
 }
-    /*Detalles del producto*/
-.contTable {
-    margin:10rem auto;
-    border-radius: 0.5rem;
-    font-size: 1.5rem;
-    overflow: auto;
-    height: min(55rem,100%);
-}
-table {
+/*Detalles del producto*/
+
+.botonDetalle {
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
+}
+
+@media (max-width: 45rem) {
+    .contTable {
+
+        padding: 1.5rem;
+    }
+    table {
+        table-layout: fixed;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .regresar {
+        min-width: 100%;
+        padding: 2rem;
+        order:  2;
+    }
+    .regresar:hover {
+        box-shadow: 0 0 3px 1px #319d90;
+    }
+    td {
+            overflow: auto;
+    }
+}
+
+table {
+    table-layout: fixed;
+    text-align: center;
     width: 100%;
 }
 th {
     background-color: #319d90;
     padding: 1rem;
+    font-weight: bold;
+    font-size: 1.6rem;
 }
 td {
-    overflow: auto;
-    background-color: #e4f3f6;
-    margin: auto;
+    background-color: rgba(153, 153, 153, 0.53);
     padding: 1rem;
-    border-radius: 5px;
-    height:3rem;
+    height:4.5rem;
     color: #319d90;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+}
+td:hover {
+    box-shadow:0 0 5px 1px black;
+    border-radius: 0.5rem;
+    transform: scale(1.05);
+    transition: all ease 0.3s;
 }
 caption {
+    margin: 1rem 0 1rem 0;
     font-size:2.2rem;
     font-weight: bold;
 }
-.author {text-align: center;
-font-weight: bold;
-font-size: 1.5rem;}
+.author {
+    /*Colocar el footer hasta abajo*/
+    margin-top: 1rem;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    position: sticky;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: green;
+}
+.regresar {
+    text-align: center;
+    background-color: #e4f3f6;
+    font-size: 1.8rem;
+    width: 15rem;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+a {
+    color: green;
+}
